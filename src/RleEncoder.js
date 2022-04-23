@@ -39,7 +39,7 @@ class RleEncoder {
       );
     }
 
-    let bytesAllocated = attrs.bitsAllocated / 8 + (attrs.bitsAllocated % 8 === 0 ? 0 : 1);
+    const bytesAllocated = attrs.bitsAllocated / 8 + (attrs.bitsAllocated % 8 === 0 ? 0 : 1);
     const pixelCount = attrs.width * attrs.height;
     let imageSize = pixelCount * bytesAllocated * attrs.samplesPerPixel;
     if ((imageSize & 1) === 1) {

@@ -49,6 +49,9 @@ module.exports = {
       new TerserPlugin({
         extractComments: false,
         parallel: true,
+        terserOptions: {
+          sourceMap: true,
+        },
       }),
     ],
   },

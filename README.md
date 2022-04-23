@@ -4,8 +4,13 @@
 Javascript DICOM Run Length Encoding Encoder/Decoder for Node.js and Browser.
 
 ### Install
+#### Node.js
 
 	npm install dicom-rle
+
+#### Browser
+
+	<script type="text/javascript" src="https://unpkg.com/dicom-rle"></script>
 
 ### Build
 
@@ -14,9 +19,14 @@ Javascript DICOM Run Length Encoding Encoder/Decoder for Node.js and Browser.
 
 ### Usage
 ```js
+// Import objects in Node.js
 const dicomRle = require('dicom-rle');
 const RleEncoder = dicomRle.RleEncoder;
 const RleDecoder = dicomRle.RleDecoder;
+
+// Import objects in Browser
+const RleEncoder = window.dicomRle.RleEncoder;
+const RleDecoder = window.dicomRle.RleDecoder;
 
 // Create image encoding/decoding attributes.
 const attrs = {
