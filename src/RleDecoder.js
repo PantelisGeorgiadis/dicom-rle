@@ -201,6 +201,7 @@ class RleDecoder {
   }
   //#endregion
 }
+//#endregion
 
 //#region Exports
 module.exports = RleDecoder;

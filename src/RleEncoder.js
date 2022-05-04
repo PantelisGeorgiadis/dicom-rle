@@ -238,6 +238,7 @@ class RleEncoder {
     this.encodedData = [...new Uint8Array(headerArrayBuffer)].concat(this.encodedData);
   }
 }
+//#endregion
 
 //#region Exports
 module.exports = RleEncoder;
