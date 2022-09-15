@@ -130,15 +130,15 @@ class RleDecoder {
    * @method
    * @private
    * @param {number} val - Value.
-   * @param {number} bitwidth - Bit width.
+   * @param {number} bitWidth - Bit width.
    */
-  _uncomplement(val, bitwidth) {
-    const isNegative = val & (1 << (bitwidth - 1));
-    const boundary = 1 << bitwidth;
-    const minval = -boundary;
+  _uncomplement(val, bitWidth) {
+    const isNegative = val & (1 << (bitWidth - 1));
+    const boundary = 1 << bitWidth;
+    const minVal = -boundary;
     const mask = boundary - 1;
 
-    return isNegative ? minval + (val & mask) : val;
+    return isNegative ? minVal + (val & mask) : val;
   }
 
   /**

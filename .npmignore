@@ -7,4 +7,6 @@ test/
 .eslintrc.json
 .gitignore
 .c8rc.json
+index.test-d.ts
+karma.config.js
 webpack.config.js
