@@ -4,6 +4,25 @@ const chai = require('chai');
 const expect = chai.expect;
 
 describe('RleDecoder', () => {
+  it('should throw for bad attributes', () => {
+    expect(() => {
+      const rleDecoder = new RleDecoder();
+      rleDecoder.decode(Uint8Array.from([]), {
+        width: 3,
+        bitsAllocated: 8,
+        samplesPerPixel: 1,
+      });
+    }).to.throw();
+    expect(() => {
+      const rleDecoder = new RleDecoder();
+      rleDecoder.decode(Uint8Array.from([]), {
+        width: 3,
+        height: 3,
+        bitsAllocated: 8,
+      });
+    }).to.throw();
+  });
+
   it('should correctly decode basic RLE data', () => {
     // prettier-ignore
     const rleData = Uint8Array.from([

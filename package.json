@@ -1,14 +1,19 @@
 {
   "name": "dicom-rle",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Javascript DICOM Run Length Encoding Encoder/Decoder for Node.js and Browser",
   "main": "build/dicom-rle.min.js",
   "module": "build/dicom-rle.min.js",
   "types": "index.d.ts",
   "scripts": {
-    "clean": "npm run clean:build",
+    "clean": "npm run clean:build && npm run clean:coverage && npm run clean:docs",
     "clean:build": "shx rm -rf build",
-    "build": "npm run version && npm run lint && npm run test && npm run webpack",
+    "clean:coverage": "shx rm -rf coverage",
+    "clean:docs": "shx rm -rf documentation",
+    "coverage": "c8 mocha -c .c8rc.json test/**/*.test.js",
+    "doc": "npm run doc:generate && open-cli documentation/index.html",
+    "doc:generate": "npm run clean:docs && jsdoc -c .jsdocrc.json",
+    "build": "npm run version && npm run lint && npm run test && npm run coverage && npm run webpack",
     "start": "npm run webpack",
     "prepublish": "npm run build",
     "version": "node -p -e \"'module.exports = \\'' + require('./package.json').version + '\\';'\" > src/version.js",
@@ -37,8 +42,11 @@
   "homepage": "https://github.com/PantelisGeorgiadis/dicom-rle",
   "devDependencies": {
     "browserify": "^17.0.0",
+    "c8": "^7.12.0",
     "chai": "^4.3.6",
+    "docdash": "^1.2.0",
     "eslint": "^8.23.1",
+    "jsdoc": "^3.6.11",
     "karma": "^6.4.0",
     "karma-browserify": "^8.1.0",
     "karma-chai": "^0.1.0",
@@ -50,7 +58,7 @@
     "prettier": "^2.7.1",
     "shx": "^0.3.4",
     "terser-webpack-plugin": "^5.3.6",
-    "tsd": "^0.24.0",
+    "tsd": "^0.24.1",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   }
