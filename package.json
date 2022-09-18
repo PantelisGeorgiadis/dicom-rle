@@ -1,6 +1,6 @@
 {
   "name": "dicom-rle",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Javascript DICOM Run Length Encoding Encoder/Decoder for Node.js and Browser",
   "main": "build/dicom-rle.min.js",
   "module": "build/dicom-rle.min.js",
