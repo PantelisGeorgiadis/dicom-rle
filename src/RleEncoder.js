@@ -26,6 +26,8 @@ class RleEncoder {
    * @param {number} [attrs.planarConfiguration] - For color images only -
    * Indicates whether the pixel data are sent color-by-plane or color-by-pixel (0028,0006).
    * @returns {Uint8Array} RLE encoded data.
+   * @throws Error if width/height/bits allocated/samples per pixel has an invalid value or
+   * the buffer read position is past the end of frame buffer.
    */
   encode(imageData, attrs) {
     attrs = attrs || {};
