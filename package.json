@@ -1,6 +1,6 @@
 {
   "name": "dicom-rle",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Javascript DICOM Run Length Encoding Encoder/Decoder for Node.js and Browser",
   "main": "build/dicom-rle.min.js",
   "module": "build/dicom-rle.min.js",
@@ -42,9 +42,9 @@
   "devDependencies": {
     "browserify": "^17.0.0",
     "c8": "^8.0.1",
-    "chai": "^4.3.8",
+    "chai": "^4.3.10",
     "docdash": "^2.0.2",
-    "eslint": "^8.48.0",
+    "eslint": "^8.56.0",
     "jsdoc": "^4.0.2",
     "karma": "^6.4.2",
     "karma-browserify": "^8.1.0",
@@ -53,12 +53,12 @@
     "karma-mocha": "^2.0.1",
     "karma-mocha-reporter": "^2.2.5",
     "mocha": "^10.2.0",
-    "open-cli": "^7.2.0",
-    "prettier": "^3.0.3",
+    "open-cli": "^8.0.0",
+    "prettier": "^3.1.1",
     "shx": "^0.3.4",
-    "terser-webpack-plugin": "^5.3.9",
-    "tsd": "^0.29.0",
-    "webpack": "^5.88.2",
+    "terser-webpack-plugin": "^5.3.10",
+    "tsd": "^0.30.2",
+    "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   }
 }
