@@ -12,7 +12,7 @@ class RleDecoder {
    * @param {number} [attrs.planarConfiguration] - For color images only -
    * Indicates whether the pixel data are sent color-by-plane or color-by-pixel (0028,0006).
    * @returns {Uint8Array} Decoded data.
-   * @throws Error if width/height/bits allocated/samples per pixel has an invalid value or
+   * @throws {Error} If width/height/bits allocated/samples per pixel has an invalid value or
    * the number of RLE segments is unexpected.
    */
   decode(encodedData, attrs) {
@@ -117,7 +117,7 @@ class RleDecoder {
    * @param {Uint8Array} decodedData - Decoded data.
    * @param {number} start - Decoded data start index.
    * @param {number} sampleOffset - Decoded data sample offset.
-   * @throws Error if segment number is out of range.
+   * @throws {Error} If segment number is out of range.
    */
   _decodeSegment(segment, decodedData, start, sampleOffset) {
     if (segment < 0 || segment >= this._getNumberOfSegments()) {
@@ -154,7 +154,7 @@ class RleDecoder {
    * @param {Uint8Array} data - RLE encoded data.
    * @param {number} offset - RLE encoded data offset.
    * @param {number} count - RLE encoded data count.
-   * @throws Error if the RLE literal run exceeds the input/output buffer length or
+   * @throws {Error} If the RLE literal run exceeds the input/output buffer length or
    * the RLE repeat run exceeds the output buffer length.
    */
   _decode(buffer, start, sampleOffset, rleData, offset, count) {

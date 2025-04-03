@@ -6,7 +6,7 @@ const expect = chai.expect;
 describe('RleEncoder', () => {
   it('should throw for bad attributes', () => {
     expect(() => {
-      const rleDecoder = new RleEncoder();
+      const rleEncoder = new RleEncoder();
       rleEncoder.encode(Uint8Array.from([]), {
         width: 3,
         bitsAllocated: 8,
